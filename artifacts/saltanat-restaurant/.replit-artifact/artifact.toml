@@ -17,11 +17,8 @@ run = "pnpm --filter @workspace/saltanat-restaurant run dev"
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/saltanat-restaurant", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/saltanat-restaurant/dist/public"
+publicDir = "artifacts/saltanat-restaurant/out"
 
-[[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
 
 [services.env]
 PORT = "23336"

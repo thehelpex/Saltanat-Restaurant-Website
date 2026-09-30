@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: restaurant
+    description: Public restaurant menu and guest requests
 paths:
   /healthz:
     get:
@@ -24,6 +26,82 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /restaurant/menu:
+    get:
+      operationId: listRestaurantMenu
+      tags: [restaurant]
+      summary: List menu items
+      description: Returns current public menu items, optionally filtered by category or search term.
+      parameters:
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Menu items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MenuItem"
+  /restaurant/reservations:
+    post:
+      operationId: createReservationRequest
+      tags: [restaurant]
+      summary: Submit a table reservation request
+      description: Stores a guest's request for restaurant staff to confirm.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReservationInput"
+      responses:
+        "201":
+          description: Request received and awaiting confirmation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReservationReceipt"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /restaurant/event-inquiries:
+    post:
+      operationId: createEventInquiry
+      tags: [restaurant]
+      summary: Submit an event inquiry
+      description: Stores an event inquiry for restaurant staff to follow up.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventInquiryInput"
+      responses:
+        "201":
+          description: Inquiry received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventInquiryReceipt"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +111,117 @@ components:
           type: string
       required:
         - status
+    MenuItem:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        category:
+          type: string
+        description:
+          type: ["string", "null"]
+        pricePkr:
+          type: integer
+        imageUrl:
+          type: ["string", "null"]
+        isFeatured:
+          type: boolean
+      required:
+        - id
+        - name
+        - category
+        - description
+        - pricePkr
+        - imageUrl
+        - isFeatured
+    ReservationInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          maxLength: 120
+        phone:
+          type: string
+          minLength: 7
+          maxLength: 30
+        preferredDate:
+          type: string
+          pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        preferredTime:
+          type: string
+          pattern: "^([01]\\d|2[0-3]):[0-5]\\d$"
+        guestCount:
+          type: integer
+          minimum: 1
+          maximum: 50
+        notes:
+          type: ["string", "null"]
+          maxLength: 1000
+      required:
+        - name
+        - phone
+        - preferredDate
+        - preferredTime
+        - guestCount
+    ReservationReceipt:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [awaiting_confirmation]
+        message:
+          type: string
+      required: [id, status, message]
+    EventInquiryInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          maxLength: 120
+        phone:
+          type: string
+          minLength: 7
+          maxLength: 30
+        email:
+          type: ["string", "null"]
+          maxLength: 254
+        eventType:
+          type: string
+          enum: [birthday, corporate, family-gathering, other]
+        preferredDate:
+          type: ["string", "null"]
+          pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        guestCount:
+          type: integer
+          minimum: 1
+          maximum: 500
+        notes:
+          type: ["string", "null"]
+          maxLength: 2000
+      required: [name, phone, email, eventType, preferredDate, guestCount, notes]
+    EventInquiryReceipt:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [received]
+        message:
+          type: string
+      required: [id, status, message]
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required: [error]
 

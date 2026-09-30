@@ -1,0 +1,108 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/1js8_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+    "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+    "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+    "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+    "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+    "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+    "static/chunks/1js8_next_dist_1pvywn6._.js",
+    "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+    "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+    "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js"
+  ],
+  "rootMainFilesTree": {
+    "/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+      "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+      "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+      "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+      "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+      "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+      "static/chunks/1js8_next_dist_1pvywn6._.js",
+      "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+      "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js",
+      "static/chunks/artifacts_saltanat-restaurant_219uq1s._.js"
+    ],
+    "/menu/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+      "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+      "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+      "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+      "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+      "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+      "static/chunks/1js8_next_dist_1pvywn6._.js",
+      "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+      "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js",
+      "static/chunks/artifacts_saltanat-restaurant_12s2v0g._.js"
+    ],
+    "/about/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+      "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+      "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+      "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+      "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+      "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+      "static/chunks/1js8_next_dist_1pvywn6._.js",
+      "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+      "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1ihvo1x._.js"
+    ],
+    "/events/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+      "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+      "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+      "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+      "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+      "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+      "static/chunks/1js8_next_dist_1pvywn6._.js",
+      "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+      "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1y3bnyr._.js"
+    ],
+    "/contact/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+      "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+      "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+      "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+      "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+      "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+      "static/chunks/1js8_next_dist_1pvywn6._.js",
+      "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+      "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js",
+      "static/chunks/artifacts_saltanat-restaurant_0rwev8y._.js"
+    ],
+    "/book/page": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0_9oqcf._.js",
+      "static/chunks/1js8_next_dist_compiled_next-devtools_index_01c5qus.js",
+      "static/chunks/1js8_next_dist_compiled_react-dom_0y_v1nl._.js",
+      "static/chunks/1js8_next_dist_compiled_react-server-dom-turbopack_16glyrd._.js",
+      "static/chunks/1js8_next_dist_compiled_0bscgae._.js",
+      "static/chunks/1js8_next_dist_client_0u1_2bf._.js",
+      "static/chunks/1js8_next_dist_1pvywn6._.js",
+      "static/chunks/0zix_@swc_helpers_cjs_0hi-e47._.js",
+      "static/chunks/artifacts_saltanat-restaurant_1anvha4._.js",
+      "static/chunks/turbopack-artifacts_saltanat-restaurant_1j4ui--._.js",
+      "static/chunks/artifacts_saltanat-restaurant_047zw4h._.js"
+    ]
+  },
+  "pagesChunkGroupBootstrapParams": {},
+  "chunkLoadingGlobal": "TURBOPACK"
+};
