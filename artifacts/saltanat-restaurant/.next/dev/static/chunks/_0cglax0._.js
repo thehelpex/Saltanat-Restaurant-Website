@@ -98,14 +98,20 @@ function VisitForm() {
                 columnNumber: 136
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    receipt.message,
-                    " Your table request is awaiting staff confirmation. We will be in touch using the details you provided."
-                ]
-            }, void 0, true, {
+                children: receipt.message
+            }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
                 lineNumber: 36,
                 columnNumber: 161
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                className: "text-link",
+                href: "tel:021111111771",
+                children: "Call the restaurant to confirm"
+            }, void 0, false, {
+                fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
+                lineNumber: 36,
+                columnNumber: 185
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 style: {
@@ -118,7 +124,7 @@ function VisitForm() {
             }, void 0, true, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
                 lineNumber: 36,
-                columnNumber: 288
+                columnNumber: 268
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 className: "text-link",
@@ -134,13 +140,13 @@ function VisitForm() {
                     }, void 0, false, {
                         fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
                         lineNumber: 36,
-                        columnNumber: 467
+                        columnNumber: 447
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
                 lineNumber: 36,
-                columnNumber: 344
+                columnNumber: 324
             }, this)
         ]
     }, void 0, true, {
@@ -161,7 +167,7 @@ function VisitForm() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: "Send a table request and our team will follow up to confirm availability."
+                children: "Send a table request, then call the restaurant to confirm availability."
             }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
                 lineNumber: 39,
@@ -333,7 +339,7 @@ function VisitForm() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "form-fineprint",
-                children: "This is a request, not a confirmed reservation. Our team will contact you about availability."
+                children: "This is a request, not a confirmed reservation. Please call Saltanat to confirm availability."
             }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/visit-form.tsx",
                 lineNumber: 50,

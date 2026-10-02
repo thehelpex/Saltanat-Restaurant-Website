@@ -26,7 +26,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Starters",
     description: "Eight pieces from the restaurant's signature wings selection.",
     pricePkr: 1099,
-    imageUrl: "/brand/honey-wings.jpg",
+    imageUrl: "/brand/special-wings.webp",
     isFeatured: false,
   },
   {
@@ -35,7 +35,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Starters",
     description: "Fried wings tossed in spicy Mexican sauce, served with fries.",
     pricePkr: 999,
-    imageUrl: "/brand/honey-wings.jpg",
+    imageUrl: "/brand/mexican-wings.jpg",
     isFeatured: false,
   },
   {
@@ -44,7 +44,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Seafood",
     description: "Eight prawns marinated with Saltanat's special sauce.",
     pricePkr: 2399,
-    imageUrl: null,
+    imageUrl: "/brand/special-prawns.webp",
     isFeatured: true,
   },
   {
@@ -53,7 +53,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Soup & Salad",
     description: "Chicken stock with minced chicken and sweet corn.",
     pricePkr: 449,
-    imageUrl: null,
+    imageUrl: "/brand/chicken-corn.webp",
     isFeatured: false,
   },
   {
@@ -62,7 +62,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Soup & Salad",
     description: "A fresh garden salad.",
     pricePkr: 379,
-    imageUrl: null,
+    imageUrl: "/brand/fresh-garden-salad.jpg",
     isFeatured: false,
   },
   {
@@ -71,7 +71,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "BBQ & Grills",
     description: "A classic Bihari-style barbecue favourite.",
     pricePkr: 1549,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: "/brand/chicken-bihari-boti.webp",
     isFeatured: false,
   },
   {
@@ -80,7 +80,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "BBQ & Grills",
     description: "Beef Bihari boti, cooked over charcoal.",
     pricePkr: 1699,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: "/brand/beef-bihari-boti.webp",
     isFeatured: false,
   },
   {
@@ -89,7 +89,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "BBQ & Grills",
     description: "Bone-in chicken marinated with ginger, garlic and red chilli.",
     pricePkr: 1549,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: "/brand/chicken-tandoori-boti.webp",
     isFeatured: true,
   },
   {
@@ -98,7 +98,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "BBQ & Grills",
     description: "Fish cubes marinated in traditional tikka masala and charcoal cooked.",
     pricePkr: 1999,
-    imageUrl: null,
+    imageUrl: "/brand/fish-tikka.webp",
     isFeatured: false,
   },
   {
@@ -107,7 +107,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Karahi & Handi",
     description: "Full portion, made in butter with a savoury spice blend.",
     pricePkr: 3299,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: null,
     isFeatured: true,
   },
   {
@@ -116,7 +116,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Karahi & Handi",
     description: "A creamy chicken karahi from the current menu.",
     pricePkr: 3449,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: null,
     isFeatured: false,
   },
   {
@@ -125,7 +125,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Karahi & Handi",
     description: "Full portion with a tomato-based Peshawari gravy.",
     pricePkr: 3349,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: null,
     isFeatured: false,
   },
   {
@@ -143,7 +143,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Tawa Specials",
     description: "Tawa-fried kidney, heart and brain with butter and house spices.",
     pricePkr: 2599,
-    imageUrl: null,
+    imageUrl: "/brand/mutton-katakat.webp",
     isFeatured: false,
   },
   {
@@ -152,7 +152,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "BBQ & Grills",
     description: "A Turkish-style mutton kabab from the shahi selection.",
     pricePkr: 1549,
-    imageUrl: null,
+    imageUrl: "/brand/shahi-turkish-kabab.webp",
     isFeatured: false,
   },
   {
@@ -161,7 +161,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Family Platters",
     description: "A sharing platter from Saltanat's grilled selection.",
     pricePkr: 5499,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: null,
     isFeatured: true,
   },
   {
@@ -170,7 +170,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Family Platters",
     description: "Serves 6–7; includes mutton ribs, chicken cheese kabab and more.",
     pricePkr: 18999,
-    imageUrl: "/brand/tawa-chicken.jpg",
+    imageUrl: "/brand/family-platter.jpg",
     isFeatured: true,
   },
   {
@@ -187,8 +187,8 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     name: "Slice of Three Milk Cake",
     category: "Desserts & Drinks",
     description: "A slice of three milk cake.",
-    pricePkr: 699,
-    imageUrl: null,
+    pricePkr: 799,
+    imageUrl: "/brand/three-milk-cake.jpg",
     isFeatured: false,
   },
   {
@@ -197,7 +197,7 @@ export const restaurantMenu: RestaurantMenuItem[] = [
     category: "Desserts & Drinks",
     description: "Saltanat's special kahwa.",
     pricePkr: 279,
-    imageUrl: null,
+    imageUrl: "/brand/saltanat-kahwa.jpg",
     isFeatured: false,
   },
 ];

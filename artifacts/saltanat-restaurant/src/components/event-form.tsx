@@ -30,10 +30,10 @@ export function EventForm() {
     setApiError("");
     inquiry.mutate({ data }, { onSuccess: (result) => setReceipt(result), onError: () => setApiError("We could not send your enquiry. Please try again or call us at 021 111-111-771.") });
   }
-  if (receipt) return <div className="receipt" role="status" aria-live="polite"><div className="receipt-mark"><Check size={20} /></div><h3>Enquiry received</h3><p>{receipt.message} Our team will be in touch to discuss your gathering.</p><p style={{ marginTop: 12 }}>Reference: {receipt.id}</p><button className="text-link" type="button" onClick={() => { setReceipt(null); setForm(defaults); }}>Send another enquiry <ArrowRight size={15} /></button></div>;
+  if (receipt) return <div className="receipt" role="status" aria-live="polite"><div className="receipt-mark"><Check size={20} /></div><h3>Enquiry received</h3><p>{receipt.message}</p><a className="text-link" href="tel:021111111771">Call the restaurant</a><p style={{ marginTop: 12 }}>Reference: {receipt.id}</p><button className="text-link" type="button" onClick={() => { setReceipt(null); setForm(defaults); }}>Send another enquiry <ArrowRight size={15} /></button></div>;
   return (
     <form className="form-card" onSubmit={submit} noValidate>
-      <h2>Tell us about your gathering</h2><p>Share a few details and our team will follow up to talk through your event.</p>
+      <h2>Tell us about your gathering</h2><p>Share a few details, then call Saltanat to discuss your event.</p>
       <div className="form-grid">
         <EventField label="Your name" name="name" value={form.name} error={errors.name} onChange={(value) => update("name", value)} autoComplete="name" />
         <EventField label="Phone number" name="phone" value={form.phone} error={errors.phone} onChange={(value) => update("phone", value)} type="tel" autoComplete="tel" placeholder="e.g. 03xx xxxxxxx" />
@@ -45,7 +45,7 @@ export function EventForm() {
       </div>
       {apiError && <div className="form-error" role="alert">{apiError}</div>}
       <button className="button form-submit" type="submit" disabled={inquiry.isPending}>{inquiry.isPending ? <><RotateCw size={15} /> Sending enquiry…</> : <>Send event enquiry <ArrowRight size={15} /></>}</button>
-      <p className="form-fineprint">Sending an enquiry does not confirm an event booking. Our team will discuss availability with you.</p>
+      <p className="form-fineprint">Sending an enquiry does not confirm an event booking. Please call Saltanat to discuss availability.</p>
     </form>
   );
 }

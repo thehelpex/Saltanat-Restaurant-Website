@@ -99,14 +99,20 @@ function EventForm() {
                 columnNumber: 136
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    receipt.message,
-                    " Our team will be in touch to discuss your gathering."
-                ]
-            }, void 0, true, {
+                children: receipt.message
+            }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
                 lineNumber: 33,
                 columnNumber: 161
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                className: "text-link",
+                href: "tel:021111111771",
+                children: "Call the restaurant"
+            }, void 0, false, {
+                fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
+                lineNumber: 33,
+                columnNumber: 185
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 style: {
@@ -119,7 +125,7 @@ function EventForm() {
             }, void 0, true, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
                 lineNumber: 33,
-                columnNumber: 238
+                columnNumber: 257
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 className: "text-link",
@@ -135,13 +141,13 @@ function EventForm() {
                     }, void 0, false, {
                         fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
                         lineNumber: 33,
-                        columnNumber: 416
+                        columnNumber: 435
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
                 lineNumber: 33,
-                columnNumber: 294
+                columnNumber: 313
             }, this)
         ]
     }, void 0, true, {
@@ -162,7 +168,7 @@ function EventForm() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: "Share a few details and our team will follow up to talk through your event."
+                children: "Share a few details, then call Saltanat to discuss your event."
             }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
                 lineNumber: 36,
@@ -394,7 +400,7 @@ function EventForm() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "form-fineprint",
-                children: "Sending an enquiry does not confirm an event booking. Our team will discuss availability with you."
+                children: "Sending an enquiry does not confirm an event booking. Please call Saltanat to discuss availability."
             }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/components/event-form.tsx",
                 lineNumber: 48,

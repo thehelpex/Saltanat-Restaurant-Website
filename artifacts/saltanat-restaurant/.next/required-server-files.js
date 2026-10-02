@@ -107,6 +107,10 @@ self.__SERVER_FILES_MANIFEST={
       }
     },
     "outputFileTracingRoot": "/home/runner/workspace",
+    "allowedDevOrigins": [
+      "**.replit.dev",
+      "127.0.0.1"
+    ],
     "enablePrerenderSourceMaps": true,
     "cacheComponents": false,
     "cacheLife": {

@@ -1,0 +1,1 @@
+- [Next.js artifact publishing](saltanat-next-export.md) — this web artifact uses Next static export; keep dynamic requests in the shared API server.

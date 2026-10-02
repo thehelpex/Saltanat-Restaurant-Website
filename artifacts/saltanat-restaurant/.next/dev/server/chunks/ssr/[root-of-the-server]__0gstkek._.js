@@ -52,7 +52,7 @@ function BookPage() {
                     lineNumber: 13,
                     columnNumber: 54
                 }, this),
-                copy: "Share your preferred date and time. Our team will get back to you to confirm availability."
+                copy: "Share your preferred date and time. Call the restaurant to confirm availability before your visit."
             }, void 0, false, {
                 fileName: "[project]/artifacts/saltanat-restaurant/src/app/book/page.tsx",
                 lineNumber: 13,
@@ -97,7 +97,7 @@ function BookPage() {
                                     columnNumber: 90
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: "Tell us how many are joining and when you would like to visit. A member of our team will follow up to confirm."
+                                    children: "Tell us how many are joining and when you would like to visit. Call us to confirm availability."
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/saltanat-restaurant/src/app/book/page.tsx",
                                     lineNumber: 15,
@@ -113,14 +113,14 @@ function BookPage() {
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/saltanat-restaurant/src/app/book/page.tsx",
                                             lineNumber: 15,
-                                            columnNumber: 389
+                                            columnNumber: 374
                                         }, this),
                                         "."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/saltanat-restaurant/src/app/book/page.tsx",
                                     lineNumber: 15,
-                                    columnNumber: 271
+                                    columnNumber: 256
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$6_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     className: "text-link",
@@ -131,14 +131,14 @@ function BookPage() {
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/saltanat-restaurant/src/app/book/page.tsx",
                                             lineNumber: 15,
-                                            columnNumber: 491
+                                            columnNumber: 476
                                         }, this),
                                         " Call the restaurant"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/saltanat-restaurant/src/app/book/page.tsx",
                                     lineNumber: 15,
-                                    columnNumber: 442
+                                    columnNumber: 427
                                 }, this)
                             ]
                         }, void 0, true, {

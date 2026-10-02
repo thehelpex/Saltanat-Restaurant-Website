@@ -64,7 +64,7 @@ router.post("/restaurant/reservations", async (req, res): Promise<void> => {
     CreateReservationRequestResponse.parse({
       id: reservation.id,
       status: "awaiting_confirmation",
-      message: "Your request has been received. Saltanat will contact you to confirm availability.",
+      message: "Your request has been recorded. Please call Saltanat to confirm availability; this is not a confirmed reservation.",
     }),
   );
 });
@@ -104,7 +104,7 @@ router.post("/restaurant/event-inquiries", async (req, res): Promise<void> => {
     CreateEventInquiryResponse.parse({
       id: inquiry.id,
       status: "received",
-      message: "Your event inquiry has been received. Saltanat will contact you to discuss the details.",
+      message: "Your inquiry has been recorded. Please call Saltanat to discuss availability and arrangements.",
     }),
   );
 });

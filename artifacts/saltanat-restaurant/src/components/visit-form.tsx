@@ -33,10 +33,10 @@ export function VisitForm() {
     setApiError("");
     request.mutate({ data }, { onSuccess: (result) => setReceipt(result), onError: () => setApiError("Your request could not be sent. Please try again, or call us at 021 111-111-771.") });
   }
-  if (receipt) return <div className="receipt" role="status" aria-live="polite"><div className="receipt-mark"><Check size={20} /></div><h3>Request received</h3><p>{receipt.message} Your table request is awaiting staff confirmation. We will be in touch using the details you provided.</p><p style={{ marginTop: 12 }}>Reference: {receipt.id}</p><button className="text-link" type="button" onClick={() => { setReceipt(null); setFields(initial); }}>Make another request <ArrowRight size={15} /></button></div>;
+  if (receipt) return <div className="receipt" role="status" aria-live="polite"><div className="receipt-mark"><Check size={20} /></div><h3>Request received</h3><p>{receipt.message}</p><a className="text-link" href="tel:021111111771">Call the restaurant to confirm</a><p style={{ marginTop: 12 }}>Reference: {receipt.id}</p><button className="text-link" type="button" onClick={() => { setReceipt(null); setFields(initial); }}>Make another request <ArrowRight size={15} /></button></div>;
   return (
     <form className="form-card" onSubmit={submit} noValidate>
-      <h2>Tell us when you are coming</h2><p>Send a table request and our team will follow up to confirm availability.</p>
+      <h2>Tell us when you are coming</h2><p>Send a table request, then call the restaurant to confirm availability.</p>
       <div className="form-grid">
         <Field label="Your name" name="name" value={fields.name} error={errors.name} onChange={(value) => update("name", value)} autoComplete="name" />
         <Field label="Phone number" name="phone" value={fields.phone} error={errors.phone} onChange={(value) => update("phone", value)} autoComplete="tel" type="tel" placeholder="e.g. 03xx xxxxxxx" />
@@ -47,7 +47,7 @@ export function VisitForm() {
       </div>
       {apiError && <div className="form-error" role="alert">{apiError}</div>}
       <button className="button form-submit" type="submit" disabled={request.isPending}>{request.isPending ? <><RotateCw size={15} className="spin" /> Sending request…</> : <>Send table request <ArrowRight size={15} /></>}</button>
-      <p className="form-fineprint">This is a request, not a confirmed reservation. Our team will contact you about availability.</p>
+      <p className="form-fineprint">This is a request, not a confirmed reservation. Please call Saltanat to confirm availability.</p>
     </form>
   );
 }
