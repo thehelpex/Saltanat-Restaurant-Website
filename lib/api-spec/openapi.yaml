@@ -57,7 +57,7 @@ paths:
       operationId: createReservationRequest
       tags: [restaurant]
       summary: Submit a table reservation request
-      description: Stores a guest's request for restaurant staff to confirm.
+      description: Stores a guest's request. It is not a confirmed reservation.
       requestBody:
         required: true
         content:
@@ -82,7 +82,7 @@ paths:
       operationId: createEventInquiry
       tags: [restaurant]
       summary: Submit an event inquiry
-      description: Stores an event inquiry for restaurant staff to follow up.
+      description: Stores an event inquiry. Call the restaurant to discuss availability and arrangements.
       requestBody:
         required: true
         content:

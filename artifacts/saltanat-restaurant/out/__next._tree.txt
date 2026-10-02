@@ -4,4 +4,4 @@
 :HL["/brand/tawa-chicken.jpg","image"]
 :HL["/brand/honey-wings.jpg","image"]
 :HL["/brand/burger.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"7OmftGsjackzr8WHw48pG"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"VCbSOk7CasVmjj7O0RrWh"}

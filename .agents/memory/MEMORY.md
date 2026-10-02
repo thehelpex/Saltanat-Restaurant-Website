@@ -1,1 +1,1 @@
-- [Next.js artifact publishing](saltanat-next-export.md) — this web artifact uses Next static export; keep dynamic requests in the shared API server.
+- [Saltanat web/API deployment](saltanat-next-export.md) — the website is a static Next export; Django serves dynamic routes against the existing PostgreSQL tables.
