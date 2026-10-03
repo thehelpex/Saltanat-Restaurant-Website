@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useCart } from "@/components/cart";
 
 const navItems = [
   { href: "/", label: "Discover" },
@@ -16,6 +17,7 @@ const navItems = [
 export function SiteHeader() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
+  const cart = useCart();
   return (
     <>
       <div className="topline">Stadium Road · Karachi &nbsp; | &nbsp; Dine-in under the stars</div>
@@ -33,7 +35,8 @@ export function SiteHeader() {
           </nav>
           <div className="nav-actions">
             <a className="phone-link" href="tel:021111111771">021 111-111-771</a>
-            <Link className="button" href="/book">Request a table</Link>
+            <Link className="button button-outline order-link" href="/order">Order online{cart.itemCount ? ` (${cart.itemCount})` : ""}</Link>
+            <Link className="button table-link" href="/book">Request a table</Link>
             <button className="menu-toggle" type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen(!open)}>
               {open ? <X size={19} /> : <Menu size={19} />}
             </button>

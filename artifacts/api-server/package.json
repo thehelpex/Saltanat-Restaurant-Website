@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "python3 manage.py runserver 0.0.0.0:${PORT:-8080}",
-    "build": "python3 manage.py check",
+    "build": "uv run --project ../.. python manage.py check",
     "start": "python3 -m gunicorn saltanat_api.wsgi:application --bind 0.0.0.0:${PORT:-8080} --workers 2",
-    "typecheck": "python3 -m compileall -q saltanat_api manage.py",
-    "test": "python3 manage.py test saltanat_api"
+    "typecheck": "uv run --project ../.. python -m compileall -q saltanat_api manage.py",
+    "test": "uv run --project ../.. python manage.py test saltanat_api"
   }
 }

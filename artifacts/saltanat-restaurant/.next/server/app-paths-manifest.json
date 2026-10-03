@@ -5,6 +5,9 @@
   "/book/page": "app/book/page.js",
   "/contact/page": "app/contact/page.js",
   "/events/page": "app/events/page.js",
+  "/manager/page": "app/manager/page.js",
   "/menu/page": "app/menu/page.js",
-  "/page": "app/page.js"
+  "/order/page": "app/order/page.js",
+  "/page": "app/page.js",
+  "/staff/orders/page": "app/staff/orders/page.js"
 }

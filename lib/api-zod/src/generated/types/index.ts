@@ -6,6 +6,7 @@
  * OpenAPI spec version: 0.1.0
  */
 
+export * from './deliveryArea';
 export * from './errorResponse';
 export * from './eventInquiryInput';
 export * from './eventInquiryInputEventType';
@@ -17,3 +18,10 @@ export * from './menuItem';
 export * from './reservationInput';
 export * from './reservationReceipt';
 export * from './reservationReceiptStatus';
+export * from './restaurantOrderInput';
+export * from './restaurantOrderInputFulfillmentType';
+export * from './restaurantOrderInputItemsItem';
+export * from './restaurantOrderInputPaymentMethod';
+export * from './restaurantOrderReceipt';
+export * from './restaurantOrderReceiptPaymentMethod';
+export * from './restaurantOrderReceiptStatus';

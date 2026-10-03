@@ -1,20 +1,20 @@
 {
   "pages": {
     "/_app": [
-      "static/chunks/0m03_v31oncuv.js",
-      "static/chunks/1130hpv4dagj5.js",
-      "static/chunks/turbopack-0bsstvt3tnj2r.js"
+      "static/chunks/2dnjkphmdyidp.js",
+      "static/chunks/2h6i6-7-p6igy.js",
+      "static/chunks/turbopack-0l9x__3fd7p26.js"
     ],
     "/_error": [
-      "static/chunks/2ohmh_n-yk5z4.js",
-      "static/chunks/1130hpv4dagj5.js",
-      "static/chunks/turbopack-27cj8gccuwkwa.js"
+      "static/chunks/3w2pk5bvc18ql.js",
+      "static/chunks/2h6i6-7-p6igy.js",
+      "static/chunks/turbopack-38lc26d76omwr.js"
     ],
     "/not-found": [
-      "static/chunks/0gi0rd6ma1u5h.js",
-      "static/chunks/1130hpv4dagj5.js",
+      "static/chunks/24s03udyxv1rs.js",
+      "static/chunks/2h6i6-7-p6igy.js",
       "static/chunks/0x29r2074edz-.js",
-      "static/chunks/turbopack-0sokcz1y30s08.js"
+      "static/chunks/turbopack-0t481mm-ldca5.js"
     ]
   },
   "devFiles": [],
@@ -22,16 +22,16 @@
     "static/chunks/0cz1d0mv5g_q7.js"
   ],
   "lowPriorityFiles": [
-    "static/VCbSOk7CasVmjj7O0RrWh/_buildManifest.js",
-    "static/VCbSOk7CasVmjj7O0RrWh/_ssgManifest.js",
-    "static/VCbSOk7CasVmjj7O0RrWh/_clientMiddlewareManifest.js"
+    "static/0YTvXdDvONH3AGfhb6PwO/_buildManifest.js",
+    "static/0YTvXdDvONH3AGfhb6PwO/_ssgManifest.js",
+    "static/0YTvXdDvONH3AGfhb6PwO/_clientMiddlewareManifest.js"
   ],
   "rootMainFiles": [
-    "static/chunks/1xtwlkd_n5y_h.js",
-    "static/chunks/2utq3egl-1a88.js",
-    "static/chunks/1o4n_wjvx5frv.js",
-    "static/chunks/1wprijmq4sfa-.js",
-    "static/chunks/turbopack-0i4drkfaki1hz.js"
+    "static/chunks/3x757x-j-6rog.js",
+    "static/chunks/2nt-17bf7kkqk.js",
+    "static/chunks/3vd1nibwc9hul.js",
+    "static/chunks/43tns8iffqgwk.js",
+    "static/chunks/turbopack-3_93jxip1fz3l.js"
   ],
   "rootMainFilesTree": {},
   "pagesChunkGroupBootstrapParams": {},

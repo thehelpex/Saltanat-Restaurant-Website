@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:I[39276,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js","/_next/static/chunks/3epyy-opjalxs.js"],"StaffOrders"]
+3:I[5082,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[5082,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"ViewportBoundary"]
+9:I[5082,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"MetadataBoundary"]
+b:I[79120,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"default"]
+c:I[34363,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"default"]
+10:I[99678,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"Providers"]
+11:I[79022,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"SiteHeader"]
+12:I[80955,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],""]
+13:I[13167,["/_next/static/chunks/23pg6ief641nn.js","/_next/static/chunks/0g3tyq96q0hgh.js","/_next/static/chunks/2lduzhk6n118f.js"],"SiteFooter"]
+:HL["/_next/static/chunks/2zyx418vny7kv.css","style"]
+7:X
+e:X
+e:C
+0:{"buildId":"0YTvXdDvONH3AGfhb6PwO","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/_next/static/chunks/3epyy-opjalxs.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Staff Orders | Saltanat Restaurant | Saltanat Restaurant Karachi"}],["$","meta","1",{"name":"description","content":"Gather over Pakistani BBQ, karahi and family favourites at Saltanat Restaurant on Stadium Road, Karachi. Dine under the stars and request your table."}],["$","meta","2",{"name":"keywords","content":"Saltanat Restaurant Karachi,Stadium Road Karachi restaurant,family restaurant Karachi,BBQ and karahi in Karachi,event booking Karachi"}],["$","meta","3",{"name":"robots","content":"noindex, nofollow"}],["$","meta","4",{"property":"og:title","content":"Saltanat Restaurant | Dine-in Under the Stars"}],["$","meta","5",{"property":"og:description","content":"A lively family dining destination on Stadium Road, Karachi."}],["$","meta","6",{"property":"og:image","content":"https://saltanatrestaurant.com/brand/banner-01.jpg"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","9",{"name":"twitter:title","content":"Saltanat Restaurant | Dine-in Under the Stars"}],["$","meta","10",{"name":"twitter:description","content":"A lively family dining destination on Stadium Road, Karachi."}],["$","meta","11",{"name":"twitter:image","content":"https://saltanatrestaurant.com/brand/banner-01.jpg"}]]}]}]}],null]}],"isPartial":"$@a","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$7","varyParams":"$e"},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@f","staleTime":"$7","varyParams":"$e"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2zyx418vny7kv.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/23pg6ief641nn.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/0g3tyq96q0hgh.js","async":true}],["$","script","script-2",{"src":"/_next/static/chunks/2lduzhk6n118f.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L10",null,{"children":["$","div",null,{"className":"site-shell","children":[["$","$L11",null,{}],["$","main",null,{"children":["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}],"notFound":[["$","section",null,{"className":"page-hero","children":["$","div",null,{"className":"wrap","children":[["$","div",null,{"className":"eyebrow","children":"A wrong turn"}],["$","h1",null,{"className":"display","children":["This page",["$","br",null,{}],["$","em",null,{"children":"isn't on the menu."}]]}],["$","p",null,{"children":"Head back to the table and find your way around Saltanat."}],["$","$L12",null,{"className":"button","href":"/","children":"Back to Saltanat"}]]}]}],[]]}]}],["$","$L13",null,{}]]}]}]}]}]]}],"isPartial":"$@14","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+5:null
+7:300
+16:true
+7:C
+15:0
+a:"$undefined"
+d:"$undefined"
+f:"$undefined"
+14:"$undefined"
+6:"$undefined"

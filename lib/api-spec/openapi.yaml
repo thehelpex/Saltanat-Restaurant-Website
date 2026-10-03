@@ -52,6 +52,21 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/MenuItem"
+  /restaurant/delivery-areas:
+    get:
+      operationId: listRestaurantDeliveryAreas
+      tags: [restaurant]
+      summary: List available delivery areas
+      description: Returns active delivery areas and their configured flat fees.
+      responses:
+        "200":
+          description: Active delivery areas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DeliveryArea"
   /restaurant/reservations:
     post:
       operationId: createReservationRequest
@@ -102,6 +117,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
+  /restaurant/orders:
+    post:
+      operationId: createRestaurantOrder
+      tags: [restaurant]
+      summary: Submit a restaurant food order
+      description: Stores an unpaid pickup or delivery order request for staff confirmation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RestaurantOrderInput"
+      responses:
+        "201":
+          description: Order request received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RestaurantOrderReceipt"
+        "400":
+          description: Invalid order
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "503":
+          description: Card payment is not configured
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -128,6 +174,8 @@ components:
           type: ["string", "null"]
         isFeatured:
           type: boolean
+        isAvailable:
+          type: boolean
       required:
         - id
         - name
@@ -136,6 +184,21 @@ components:
         - pricePkr
         - imageUrl
         - isFeatured
+        - isAvailable
+    DeliveryArea:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        deliveryFeePkr:
+          type: integer
+        isActive:
+          type: boolean
+        sortOrder:
+          type: integer
+      required: [id, name, deliveryFeePkr, isActive, sortOrder]
     ReservationInput:
       type: object
       properties:
@@ -218,10 +281,79 @@ components:
         message:
           type: string
       required: [id, status, message]
+    RestaurantOrderInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          maxLength: 120
+        phone:
+          type: string
+          minLength: 7
+          maxLength: 30
+        fulfillmentType:
+          type: string
+          enum: [pickup, delivery]
+        deliveryAddress:
+          type: string
+          maxLength: 500
+        deliveryAreaId:
+          type: integer
+          minimum: 1
+        paymentMethod:
+          type: string
+          enum: [cod, card]
+        notes:
+          type: ["string", "null"]
+          maxLength: 1000
+        items:
+          type: array
+          minItems: 1
+          maxItems: 50
+          items:
+            type: object
+            properties:
+              menuItemId:
+                type: integer
+                minimum: 1
+              quantity:
+                type: integer
+                minimum: 1
+                maximum: 20
+            required: [menuItemId, quantity]
+      required: [name, phone, fulfillmentType, paymentMethod, items]
+    RestaurantOrderReceipt:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [awaiting_confirmation]
+        paymentMethod:
+          type: string
+          enum: [cod]
+        subtotalPkr:
+          type: integer
+        deliveryFeePkr:
+          type: ["integer", "null"]
+        totalPkr:
+          type: ["integer", "null"]
+        message:
+          type: string
+      required:
+        - id
+        - status
+        - paymentMethod
+        - subtotalPkr
+        - deliveryFeePkr
+        - totalPkr
+        - message
     ErrorResponse:
       type: object
       properties:
         error:
           type: string
       required: [error]
-

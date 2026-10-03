@@ -20,6 +20,7 @@ import type {
 } from '@tanstack/react-query';
 
 import type {
+  DeliveryArea,
   ErrorResponse,
   EventInquiryInput,
   EventInquiryReceipt,
@@ -27,7 +28,9 @@ import type {
   ListRestaurantMenuParams,
   MenuItem,
   ReservationInput,
-  ReservationReceipt
+  ReservationReceipt,
+  RestaurantOrderInput,
+  RestaurantOrderReceipt
 } from './api.schemas';
 
 import { customFetch } from '../custom-fetch';
@@ -220,6 +223,84 @@ export function useListRestaurantMenu<TData = Awaited<ReturnType<typeof listRest
 
 
 
+export const getListRestaurantDeliveryAreasUrl = () => {
+
+
+
+
+  return `/api/restaurant/delivery-areas`
+}
+
+/**
+ * Returns active delivery areas and their configured flat fees.
+ * @summary List available delivery areas
+ */
+export const listRestaurantDeliveryAreas = async ( options?: Parameters<typeof customFetch>[1]): Promise<DeliveryArea[]> => {
+
+  return customFetch<DeliveryArea[]>(getListRestaurantDeliveryAreasUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getListRestaurantDeliveryAreasQueryKey = () => {
+    return [
+    `/api/restaurant/delivery-areas`
+    ] as const;
+    }
+
+
+export const getListRestaurantDeliveryAreasQueryOptions = <TData = Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>, TError = ErrorType<unknown>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getListRestaurantDeliveryAreasQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>> = ({ signal }) => listRestaurantDeliveryAreas({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type ListRestaurantDeliveryAreasQueryResult = NonNullable<Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>>
+export type ListRestaurantDeliveryAreasQueryError = ErrorType<unknown>
+
+
+/**
+ * @summary List available delivery areas
+ */
+
+export function useListRestaurantDeliveryAreas<TData = Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>, TError = ErrorType<unknown>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listRestaurantDeliveryAreas>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getListRestaurantDeliveryAreasQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
 export const getCreateReservationRequestUrl = () => {
 
 
@@ -229,7 +310,7 @@ export const getCreateReservationRequestUrl = () => {
 }
 
 /**
- * Stores a guest's request for restaurant staff to confirm.
+ * Stores a guest's request. It is not a confirmed reservation.
  * @summary Submit a table reservation request
  */
 export const createReservationRequest = async (reservationInput: ReservationInput, options?: Parameters<typeof customFetch>[1]): Promise<ReservationReceipt> => {
@@ -318,7 +399,7 @@ export const getCreateEventInquiryUrl = () => {
 }
 
 /**
- * Stores an event inquiry for restaurant staff to follow up.
+ * Stores an event inquiry. Call the restaurant to discuss availability and arrangements.
  * @summary Submit an event inquiry
  */
 export const createEventInquiry = async (eventInquiryInput: EventInquiryInput, options?: Parameters<typeof customFetch>[1]): Promise<EventInquiryReceipt> => {
@@ -396,5 +477,94 @@ export const useCreateEventInquiry = <TError = ErrorType<ErrorResponse>,
         TContext
       > => {
       return useMutation(getCreateEventInquiryMutationOptions(options));
+    }
+
+export const getCreateRestaurantOrderUrl = () => {
+
+
+
+
+  return `/api/restaurant/orders`
+}
+
+/**
+ * Stores an unpaid pickup or delivery order request for staff confirmation.
+ * @summary Submit a restaurant food order
+ */
+export const createRestaurantOrder = async (restaurantOrderInput: RestaurantOrderInput, options?: Parameters<typeof customFetch>[1]): Promise<RestaurantOrderReceipt> => {
+
+    const getHeaders = (h?: NonNullable<RequestInit['headers']>): Record<string, string | readonly string[]> => {
+    if (!h) return {};
+    if (h instanceof Headers) return Object.fromEntries(h.entries());
+    if (Symbol.iterator in h) {
+      return Object.fromEntries(
+        Array.from(h as Iterable<Iterable<string>>, (entry) => Array.from(entry) as [string, string]),
+      );
+    }
+    const headers: Record<string, string | readonly string[]> = {};
+    for (const [name, value] of Object.entries<string | readonly string[] | undefined>(h)) {
+      if (value !== undefined) headers[name] = value;
+    }
+    return headers;
+  };
+return customFetch<RestaurantOrderReceipt>(getCreateRestaurantOrderUrl(),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getHeaders(options?.headers) },
+    body: JSON.stringify(restaurantOrderInput)
+  }
+);}
+
+
+
+
+
+export const getCreateRestaurantOrderMutationKey = () => ['createRestaurantOrder'] as const;
+
+export const getCreateRestaurantOrderMutationOptions = <TError = ErrorType<ErrorResponse>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof createRestaurantOrder>>, TError,CreateRestaurantOrderMutationVariables, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof createRestaurantOrder>>, TError,CreateRestaurantOrderMutationVariables, TContext> => {
+
+const mutationKey = getCreateRestaurantOrderMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof createRestaurantOrder>>, CreateRestaurantOrderMutationVariables> = (props) => {
+          const {data} = props ?? {};
+
+          return  createRestaurantOrder(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type CreateRestaurantOrderMutationResult = NonNullable<Awaited<ReturnType<typeof createRestaurantOrder>>>
+    export type CreateRestaurantOrderMutationBody = BodyType<RestaurantOrderInput>
+    export type CreateRestaurantOrderMutationError = ErrorType<ErrorResponse>
+    export type CreateRestaurantOrderMutationVariables = {data: BodyType<RestaurantOrderInput>}
+
+    /**
+ * @summary Submit a restaurant food order
+ */
+export const useCreateRestaurantOrder = <TError = ErrorType<ErrorResponse>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof createRestaurantOrder>>, TError,CreateRestaurantOrderMutationVariables, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof createRestaurantOrder>>,
+        TError,
+        CreateRestaurantOrderMutationVariables,
+        TContext
+      > => {
+      return useMutation(getCreateRestaurantOrderMutationOptions(options));
     }
 

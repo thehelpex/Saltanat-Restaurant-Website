@@ -74,6 +74,12 @@
       "namedRegex": "^/events(?:/)?$"
     },
     {
+      "page": "/manager",
+      "regex": "^/manager(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manager(?:/)?$"
+    },
+    {
       "page": "/menu",
       "regex": "^/menu(?:/)?$",
       "routeKeys": {},
@@ -84,6 +90,18 @@
       "regex": "^/not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/not\\-found(?:/)?$"
+    },
+    {
+      "page": "/order",
+      "regex": "^/order(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/order(?:/)?$"
+    },
+    {
+      "page": "/staff/orders",
+      "regex": "^/staff/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/staff/orders(?:/)?$"
     }
   ],
   "dataRoutes": [],

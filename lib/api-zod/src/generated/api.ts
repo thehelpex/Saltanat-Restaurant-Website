@@ -33,13 +33,28 @@ export const ListRestaurantMenuResponseItem = zod.object({
   "description": zod.string().nullable(),
   "pricePkr": zod.number().int(),
   "imageUrl": zod.string().nullable(),
-  "isFeatured": zod.boolean()
+  "isFeatured": zod.boolean(),
+  "isAvailable": zod.boolean()
 })
 export const ListRestaurantMenuResponse = zod.array(ListRestaurantMenuResponseItem)
 
 
 /**
- * Stores a guest's request for restaurant staff to confirm.
+ * Returns active delivery areas and their configured flat fees.
+ * @summary List available delivery areas
+ */
+export const ListRestaurantDeliveryAreasResponseItem = zod.object({
+  "id": zod.number().int(),
+  "name": zod.string(),
+  "deliveryFeePkr": zod.number().int(),
+  "isActive": zod.boolean(),
+  "sortOrder": zod.number().int()
+})
+export const ListRestaurantDeliveryAreasResponse = zod.array(ListRestaurantDeliveryAreasResponseItem)
+
+
+/**
+ * Stores a guest's request. It is not a confirmed reservation.
  * @summary Submit a table reservation request
  */
 export const createReservationRequestBodyNameMin = 2;
@@ -73,7 +88,7 @@ export const CreateReservationRequestResponse = zod.object({
 
 
 /**
- * Stores an event inquiry for restaurant staff to follow up.
+ * Stores an event inquiry. Call the restaurant to discuss availability and arrangements.
  * @summary Submit an event inquiry
  */
 export const createEventInquiryBodyNameMin = 2;
@@ -104,6 +119,53 @@ export const CreateEventInquiryBody = zod.object({
 export const CreateEventInquiryResponse = zod.object({
   "id": zod.string().uuid(),
   "status": zod.enum(['received']),
+  "message": zod.string()
+})
+
+
+/**
+ * Stores an unpaid pickup or delivery order request for staff confirmation.
+ * @summary Submit a restaurant food order
+ */
+export const createRestaurantOrderBodyNameMin = 2;
+export const createRestaurantOrderBodyNameMax = 120;
+
+export const createRestaurantOrderBodyPhoneMin = 7;
+export const createRestaurantOrderBodyPhoneMax = 30;
+
+export const createRestaurantOrderBodyDeliveryAddressMax = 500;
+
+
+export const createRestaurantOrderBodyNotesMax = 1000;
+
+
+export const createRestaurantOrderBodyItemsItemQuantityMax = 20;
+
+export const createRestaurantOrderBodyItemsMax = 50;
+
+
+
+export const CreateRestaurantOrderBody = zod.object({
+  "name": zod.string().min(createRestaurantOrderBodyNameMin).max(createRestaurantOrderBodyNameMax),
+  "phone": zod.string().min(createRestaurantOrderBodyPhoneMin).max(createRestaurantOrderBodyPhoneMax),
+  "fulfillmentType": zod.enum(['pickup', 'delivery']),
+  "deliveryAddress": zod.string().max(createRestaurantOrderBodyDeliveryAddressMax).optional(),
+  "deliveryAreaId": zod.number().int().min(1).optional(),
+  "paymentMethod": zod.enum(['cod', 'card']),
+  "notes": zod.string().max(createRestaurantOrderBodyNotesMax).nullish(),
+  "items": zod.array(zod.object({
+  "menuItemId": zod.number().int().min(1),
+  "quantity": zod.number().int().min(1).max(createRestaurantOrderBodyItemsItemQuantityMax)
+})).min(1).max(createRestaurantOrderBodyItemsMax)
+})
+
+export const CreateRestaurantOrderResponse = zod.object({
+  "id": zod.string().uuid(),
+  "status": zod.enum(['awaiting_confirmation']),
+  "paymentMethod": zod.enum(['cod']),
+  "subtotalPkr": zod.number().int(),
+  "deliveryFeePkr": zod.number().int().nullable(),
+  "totalPkr": zod.number().int().nullable(),
   "message": zod.string()
 })
 

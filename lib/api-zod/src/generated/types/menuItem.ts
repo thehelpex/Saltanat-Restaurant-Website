@@ -16,4 +16,5 @@ export interface MenuItem {
   /** @nullable */
   imageUrl: string | null;
   isFeatured: boolean;
+  isAvailable: boolean;
 }

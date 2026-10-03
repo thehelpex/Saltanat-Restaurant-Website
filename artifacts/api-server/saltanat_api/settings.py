@@ -19,6 +19,11 @@ for variable in ("REPLIT_DOMAINS", "REPLIT_DEV_DOMAIN"):
         host = host.strip().split(":")[0]
         if host:
             allowed_hosts.add(host)
+allowed_hosts.update(
+    host.strip()
+    for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "").split(",")
+    if host.strip()
+)
 ALLOWED_HOSTS = sorted(allowed_hosts)
 
 database_url = os.environ.get("DATABASE_URL")
@@ -38,7 +43,43 @@ INSTALLED_APPS = [
     "saltanat_api",
 ]
 
-MIDDLEWARE = []
+CORS_ALLOWED_ORIGINS = {
+    origin.strip()
+    for origin in os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",")
+    if origin.strip()
+}
+if DEBUG:
+    CORS_ALLOWED_ORIGINS.update(
+        {"http://localhost:23336", "http://127.0.0.1:23336"}
+    )
+CACHES = (
+        {
+            "default": {
+                "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+                "LOCATION": "saltanat-local-throttling",
+            }
+        }
+        if DEBUG
+        else {
+            "default": {
+                "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+                "LOCATION": "django_cache",
+            }
+        }
+)
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "saltanat_api.cors.ApiCorsMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
+SECURE_SSL_REDIRECT = not DEBUG
+SECURE_HSTS_SECONDS = 31_536_000 if not DEBUG else 0
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = "same-origin"
+X_FRAME_OPTIONS = "DENY"
+CSRF_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
 ROOT_URLCONF = "saltanat_api.urls"
 WSGI_APPLICATION = "saltanat_api.wsgi.application"
 ASGI_APPLICATION = "saltanat_api.asgi.application"
@@ -67,6 +108,12 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_EXCEPTION_HANDLER": "saltanat_api.exceptions.api_exception_handler",
     "UNAUTHENTICATED_USER": None,
+    "DEFAULT_THROTTLE_RATES": {
+        "order_create": "10/hour",
+        "reservation_create": "10/hour",
+        "event_inquiry_create": "10/hour",
+        "staff_api": "60/minute",
+    },
 }
 
 LOGGING = {

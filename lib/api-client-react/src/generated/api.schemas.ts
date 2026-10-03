@@ -19,6 +19,15 @@ export interface MenuItem {
   /** @nullable */
   imageUrl: string | null;
   isFeatured: boolean;
+  isAvailable: boolean;
+}
+
+export interface DeliveryArea {
+  id: number;
+  name: string;
+  deliveryFeePkr: number;
+  isActive: boolean;
+  sortOrder: number;
 }
 
 export interface ReservationInput {
@@ -115,6 +124,87 @@ export const EventInquiryReceiptStatus = {
 export interface EventInquiryReceipt {
   id: string;
   status: EventInquiryReceiptStatus;
+  message: string;
+}
+
+export type RestaurantOrderInputFulfillmentType = typeof RestaurantOrderInputFulfillmentType[keyof typeof RestaurantOrderInputFulfillmentType];
+
+
+export const RestaurantOrderInputFulfillmentType = {
+  pickup: 'pickup',
+  delivery: 'delivery',
+} as const;
+
+export type RestaurantOrderInputPaymentMethod = typeof RestaurantOrderInputPaymentMethod[keyof typeof RestaurantOrderInputPaymentMethod];
+
+
+export const RestaurantOrderInputPaymentMethod = {
+  cod: 'cod',
+  card: 'card',
+} as const;
+
+export type RestaurantOrderInputItemsItem = {
+  /** @minimum 1 */
+  menuItemId: number;
+  /**
+     * @minimum 1
+     * @maximum 20
+     */
+  quantity: number;
+};
+
+export interface RestaurantOrderInput {
+  /**
+     * @minLength 2
+     * @maxLength 120
+     */
+  name: string;
+  /**
+     * @minLength 7
+     * @maxLength 30
+     */
+  phone: string;
+  fulfillmentType: RestaurantOrderInputFulfillmentType;
+  /** @maxLength 500 */
+  deliveryAddress?: string;
+  /** @minimum 1 */
+  deliveryAreaId?: number;
+  paymentMethod: RestaurantOrderInputPaymentMethod;
+  /**
+     * @maxLength 1000
+     * @nullable
+     */
+  notes?: string | null;
+  /**
+     * @minItems 1
+     * @maxItems 50
+     */
+  items: RestaurantOrderInputItemsItem[];
+}
+
+export type RestaurantOrderReceiptStatus = typeof RestaurantOrderReceiptStatus[keyof typeof RestaurantOrderReceiptStatus];
+
+
+export const RestaurantOrderReceiptStatus = {
+  awaiting_confirmation: 'awaiting_confirmation',
+} as const;
+
+export type RestaurantOrderReceiptPaymentMethod = typeof RestaurantOrderReceiptPaymentMethod[keyof typeof RestaurantOrderReceiptPaymentMethod];
+
+
+export const RestaurantOrderReceiptPaymentMethod = {
+  cod: 'cod',
+} as const;
+
+export interface RestaurantOrderReceipt {
+  id: string;
+  status: RestaurantOrderReceiptStatus;
+  paymentMethod: RestaurantOrderReceiptPaymentMethod;
+  subtotalPkr: number;
+  /** @nullable */
+  deliveryFeePkr: number | null;
+  /** @nullable */
+  totalPkr: number | null;
   message: string;
 }
 

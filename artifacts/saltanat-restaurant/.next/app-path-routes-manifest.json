@@ -5,6 +5,9 @@
   "/book/page": "/book",
   "/contact/page": "/contact",
   "/events/page": "/events",
+  "/manager/page": "/manager",
   "/menu/page": "/menu",
-  "/page": "/"
+  "/order/page": "/order",
+  "/page": "/",
+  "/staff/orders/page": "/staff/orders"
 }

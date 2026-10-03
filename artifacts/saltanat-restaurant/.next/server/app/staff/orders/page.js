@@ -1,0 +1,13 @@
+var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/staff/orders/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0whovfw._.js")
+R.c("server/chunks/ssr/01_h_next_dist_1j7fhwr._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0ja8z94._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__07tcn-e._.js")
+R.c("server/chunks/ssr/artifacts_saltanat-restaurant_src_049cchx._.js")
+R.c("server/chunks/ssr/_17-516z._.js")
+R.c("server/chunks/ssr/01_h_next_dist_client_components_1c6z0ds._.js")
+R.c("server/chunks/ssr/01_h_next_dist_client_components_builtin_unauthorized_191wqgj.js")
+R.c("server/chunks/ssr/01_h_next_dist_client_components_builtin_global-error_11h6lrw.js")
+R.c("server/chunks/ssr/1xr3_saltanat-restaurant__next-internal_server_app_staff_orders_page_actions_1_81ai-.js")
+R.m(51764)
+module.exports=R.m(51764).exports
